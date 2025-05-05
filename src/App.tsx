@@ -107,7 +107,7 @@ function App() {
 
   const triggerRefresh = () => {
     setRefreshFlag((prev) => !prev);
-    setSuccessMessage('Contact added successfully!');
+    setSuccessMessage('Numero lisätty onnistuneesti!');
 
     setTimeout(() => {
       setSuccessMessage('');
@@ -124,19 +124,19 @@ function App() {
             active={selectedView === 'add'}
             onClick={() => setSelectedView('add')}
           >
-            <AddIconStyled /> Add Entry
+            <AddIconStyled /> Lisää numero
           </ToggleButton>
           <ToggleButton
             active={selectedView === 'list'}
             onClick={() => setSelectedView('list')}
           >
-            <ListIconStyled /> View Entries
+            <ListIconStyled /> Puhelinnumerot
           </ToggleButton>
         </ViewToggle>
       </HeaderContainer>
       <ContentContainer>
         <SubtitleBar>
-         {selectedView === 'add' ? 'Add New Contact' : 'Phonebook Entries'}
+         {selectedView === 'add' ? 'Lisää numero' : 'Numerot'}
         </SubtitleBar>
         
          {selectedView === 'add' && <AddEntryForm onEntryAdded={triggerRefresh} />}

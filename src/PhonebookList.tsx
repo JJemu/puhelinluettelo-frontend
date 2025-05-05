@@ -64,16 +64,16 @@ const PhonebookList: React.FC = () => {
       const res = await axios.get<Entry[]>('http://localhost:8080/api/entries');
       setEntries(res.data);
     } catch (error) {
-      console.error('Failed to fetch entries:', error);
+      console.error('Virhe:', error);
     }
   };
 
   const deleteEntry = async (id: number) => {
     try {
       await axios.delete(`http://localhost:8080/api/entries/${id}`);
-      fetchEntries(); // Refresh after delete
+      fetchEntries();
     } catch (error) {
-      console.error('Failed to delete entry:', error);
+      console.error('Virhe:', error);
     }
   };
 
@@ -83,14 +83,14 @@ const PhonebookList: React.FC = () => {
 
   return (
     <ListContainer>
-      {entries.length === 0 && <p>No contacts found.</p>}
+      {entries.length === 0 && <p>Ei numeroita.</p>}
       {entries.map(entry => (
         <EntryCard key={entry.id}>
           <EntryInfo>
             <Name>{entry.name}</Name>
             <Phone>{entry.phone}</Phone>
           </EntryInfo>
-          <DeleteButton onClick={() => deleteEntry(entry.id)}>Delete</DeleteButton>
+          <DeleteButton onClick={() => deleteEntry(entry.id)}>Poista</DeleteButton>
         </EntryCard>
       ))}
     </ListContainer>

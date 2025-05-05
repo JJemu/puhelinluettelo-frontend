@@ -63,7 +63,7 @@ const AddEntryForm: React.FC<AddEntryFormProps> = ({ onEntryAdded }) => {
     if (!name || !phone) return;
   
     if (!isNumberValid(phone)) {
-      setError('Please enter a valid phone number (e.g. +358401234567)');
+      setError('Annathan kelvollisen puhelinnumeron.');
       return;
     }
   
@@ -74,8 +74,8 @@ const AddEntryForm: React.FC<AddEntryFormProps> = ({ onEntryAdded }) => {
       setError('');
       onEntryAdded();
     } catch (error) {
-      console.error('Failed to add entry:', error);
-      setError('Failed to save. Please try again.');
+      console.error('Virhe:', error);
+      setError('Virhe tallentaessa.');
     }
   };
 
@@ -83,14 +83,14 @@ const AddEntryForm: React.FC<AddEntryFormProps> = ({ onEntryAdded }) => {
     <Form onSubmit={handleSubmit}>
       <Input
         type="text"
-        placeholder="Full Name"
+        placeholder="Nimi"
         value={name}
         onChange={e => setName(e.target.value)}
         required
       />
       <Input
         type="text"
-        placeholder="Phone Number"
+        placeholder="Puhelinnumero"
         value={phone}
         onChange={e => setPhone(e.target.value)}
         required
@@ -98,7 +98,7 @@ const AddEntryForm: React.FC<AddEntryFormProps> = ({ onEntryAdded }) => {
 
       {error && <ErrorText>{error}</ErrorText>}
 
-      <SubmitButton type="submit">Add Contact</SubmitButton>
+      <SubmitButton type="submit">Lähetä</SubmitButton>
     </Form>
   );
 };
