@@ -1,6 +1,6 @@
 # Puhelinluettelo Frontend
 
-Puhelinluettelo is an example React web application that allows users to add, view and delete numbers to a virtual phonebook. The UI is styled using `styled-components` and features smooth transitions and responsive layout.
+Puhelinluettelo is an example React web application that allows users to add, view and delete numbers to a virtual phonebook. The UI is styled using `styled-components` and features a responsive layout.
 
 ---
 
