@@ -16,7 +16,7 @@ Puhelinluettelo is an example React web application that allows users to add, vi
 
 ## Requirements
 
-Make sure the backend Spring Boot API is running at:
+Make sure the backend Spring Boot API from https://github.com/JJemu/puhelinluettelo-api is running at:
 http://localhost:8080/
 
 ---
