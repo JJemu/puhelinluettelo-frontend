@@ -19,12 +19,16 @@ Puhelinluettelo is an example React web application that allows users to add, vi
 Make sure the backend Spring Boot API is running at:
 http://localhost:8080/
 
+---
+
 ## Installation
 
 1. Clone the repository.
 2. Install dependencies with: ```npm install```.
 3. Start the development server.
 4. Open http://localhost:5173 in your browser.
+
+---
 
 ## Screenshots
 <img src="https://github.com/user-attachments/assets/9d2e65b4-dad8-4bd5-8b3a-31653c199807" width="700">
